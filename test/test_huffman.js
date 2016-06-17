@@ -1,7 +1,8 @@
 'use strict';
 
 const assert = require('power-assert');
-const huffman = require('../huffman');
+
+const getHuffmanCodes = require('../src/huffman').getHuffmanCodes;
 
 const tests = [
   {
@@ -15,12 +16,12 @@ const tests = [
   },
 ];
 
-describe('huffman()', function() {
+describe('getHuffmanCodes()', function() {
 
   it('should works well in the 1st order', function() {
 
     tests.forEach((subtest) => {
-      const codes = huffman(subtest.probs, subtest.order);
+      const codes = getHuffmanCodes(subtest.probs, subtest.order);
 
       codes.forEach((code, i) => {
         assert.strictEqual(code, subtest.expected[i]);
