@@ -1,2 +1,4 @@
-npm i
-node sample.js
+```
+$ npm i
+$ node sample.js
+```
