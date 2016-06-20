@@ -39,7 +39,7 @@ function getHuffmanCodes(probs, order = 1) {
   return codes;
 }
 
-function getInfo(probs, codes) {
+function printInfo(probs, codes) {
   console.log('codes:');
   for (let i = 0; i < codes.length; i++) {
     console.log(`  s${i}: ${codes[i]} (${probs[i]})`);
@@ -55,4 +55,4 @@ function getInfo(probs, codes) {
 }
 
 module.exports.getHuffmanCodes = getHuffmanCodes;
-module.exports.getInfo = getInfo;
+module.exports.printInfo = printInfo;

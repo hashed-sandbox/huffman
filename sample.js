@@ -3,7 +3,7 @@
 const _ = require('lodash');
 
 const getHuffmanCodes = require('./src/huffman').getHuffmanCodes;
-const getInfo = require('./src/huffman').getInfo;
+const printInfo = require('./src/huffman').printInfo;
 
 //////////////////////////////////////////////////
 
@@ -12,7 +12,7 @@ const probs = [
 ];
 
 const codes = getHuffmanCodes(probs);
-getInfo(probs, codes);
+printInfo(probs, codes);
 
 //////////////////////////////////////////////////
 
@@ -21,4 +21,4 @@ const probs_2nd = _.flatten(probs.map((prob1) => {
 }));
 
 const codes_2nd = getHuffmanCodes(probs_2nd);
-getInfo(probs_2nd, codes_2nd);
+printInfo(probs_2nd, codes_2nd);
